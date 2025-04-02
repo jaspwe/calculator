@@ -29,3 +29,6 @@ function operate(operator, num1, num2){
 let num1 = 0
 let operator = '+'
 let num2 = 0
+
+const display = document.querySelector(".display")
+const buttons = document.querySelectorAll("button")
