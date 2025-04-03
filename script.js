@@ -33,6 +33,24 @@ let num2 = 0;
 const display = document.querySelector(".display");
 const numberPad = document.querySelector(".number-pad");
 
+const backspace = document.createElement("button")
+backspace.textContent = 'C';
+backspace.id = 'C';
+backspace.addEventListener("click", function(){
+    display.textContent = display.textContent.slice(0, display.textContent.length - 1)
+})
+numberPad.appendChild(backspace);
+
+const decimal = document.createElement("button")
+decimal.textContent = '.';
+decimal.id = '.';
+decimal.addEventListener("click", function(){
+    if (display.textContent.length < 15){
+        display.textContent = display.textContent + button.id;
+    }
+})
+numberPad.appendChild(decimal);
+
 //number buttons
 for (i = 1; i < 10; i++){
     const button = document.createElement("button")
